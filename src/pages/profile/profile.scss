@@ -1,0 +1,101 @@
+page-profile {
+    .profile {
+        span {
+            text-align: center;
+            font-weight: 500;
+            color: brown;
+            align-items: center !important;
+        }
+    }
+    .profile {
+        margin: 0 auto;
+        width: 700px;
+    }
+    #price {
+        font-weight: 500;
+        color: rgb(30, 18, 201);
+    }
+    ion-card img {
+        display: block;
+        width: 70%;
+    }
+    .profile-block {
+        top: 0;
+        height: 40rem;
+        // background-color: map-get($colors, dark);
+        .profile-photo {
+            width: 100px;
+            height: 100px;
+            top: 150px;
+            left: 30px;
+            border-radius: 50%;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.4);
+            -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.4);
+            img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                object-fit: fill;
+                margin: 0 auto;
+                display: block;
+                border: 3px solid rgba(255, 255, 255, 0.7);
+            }
+        }
+        .photo-info {
+            top: 165px;
+            left: 150px;
+            display: block;
+            text-align: left;
+            position: absolute;
+            span {
+                color: #fff;
+                font-size: 1.4em;
+            }
+            b {
+                color: #fff;
+                font-weight: 300;
+                font-size: 0.9em;
+            }
+        }
+    }
+    .header-ios .toolbar-background-ios,
+    .footer-ios .toolbar-background-ios {
+        border-style: solid;
+        border-color: map-get($colors, dark);
+        bottom: 0;
+    }
+    .infoblock {
+        margin: 0 auto;
+        padding:16px; 
+        h4{
+            display: block;
+            text-align: center;
+        }
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+        top: 95px !important;
+        left: 20% !important;
+    }
+
+    .profile-block {
+        top: 0;
+        height: 11rem !important;
+    }
+
+    .button-md {
+        border-radius: 2px !important;
+    }
+
+    .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+        top: -2px;
+        bottom: auto;
+        background-position: left 0 top 0;
+        height: 0px !important;
+    }
+    
+}

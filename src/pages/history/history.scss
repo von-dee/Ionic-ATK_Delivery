@@ -1,0 +1,22 @@
+page-history {
+
+    ion-note{
+        font-size: 0.7em;
+        text-align: right;
+        #date{
+            display: block;
+        }
+        #transcode{
+            padding-top: 20px;
+            display: block;
+        }
+    }
+
+    .titlebar {
+        padding: 10px;
+        background-color: #E6EBED;
+        color: #263238;
+        font-weight: 600;
+    }
+
+}

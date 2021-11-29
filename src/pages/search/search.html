@@ -1,0 +1,85 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content >
+
+
+    
+  <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <div style="margin-left: 1.5em; margin-top: 0em;">
+            <img src="assets/imgs/testi1.png" style="float:right;" alt="">
+          </div>
+        </ion-col>
+  
+        <ion-col col-12>
+          <div style="margin-left: 1.5em; margin-top: 0em;">
+            <p class="introquestion">
+              <p style="font-size: 2em;margin: 0;font-weight: 100;"> Hello! </p> 
+              <p style="margin-top: 1em;   margin: 0; font-size: 1.5em;font-weight: 100;">What do you want? </p>  <p>
+          </div>
+        </ion-col>
+        
+      </ion-row>
+  
+      <ion-row style="margin-top: 2.5em;">
+        <ion-col col-4 style="text-align: center;margin-top: 0%;" (tap)="presentToast('Snacks','0')">
+          <img class="category_img" src="img/snacks_grey.png" alt=""> <br> 
+          <span class="category_label" >Snacks</span>
+        </ion-col>
+        <ion-col col-4 style="text-align: center;margin-top: 10%;" (tap)="presentToast('Restaurants','1')">
+          <img class="category_img" src="img/restaurants.png" alt=""> <br>
+          <span class="category_label" >Restaurant</span>
+        </ion-col>
+        <ion-col col-4 style="text-align: center;margin-top: 0%;" (tap)="presentToast('Shops','0')">
+          <img class="category_img" src="img/shops_grey.png" alt=""> <br>
+          <span class="category_label" >Shops</span>
+        </ion-col>
+      </ion-row>
+  
+  
+      <ion-row  style="margin-top: 0em;">
+        <ion-col col-4 style="text-align: center;margin-top: 0%;" (tap)="presentToast('Pharmacy','0')">
+          <img class="category_img" src="img/pharmacy_grey.png" alt=""> <br>
+          <span class="category_label" >Pharmacy</span>
+        </ion-col>
+        <ion-col col-4 style="text-align: center;margin-top: 10%;" (tap)="presentToast('Courier','0')">
+          <img class="category_img" src="img/courier_grey.png" alt=""> <br>
+          <span class="category_label" >Courier</span>
+        </ion-col>
+        <ion-col col-4 style="text-align: center;margin-top: 0%;" (tap)="presentToast('Gifts','0')">
+          <img class="category_img" src="img/gift_grey.png" alt=""> <br>
+          <span class="category_label" >Gifts</span>
+        </ion-col>
+      </ion-row>
+  
+    </ion-grid>
+  
+
+    <ion-grid>
+      
+      <div>
+        <button style="margin-top: 4.5em; height: 5em;width: 100%; background: transparent;" >
+          <p style="float: left;font-size: 1.1em;float: right !important; margin-left: 20%; padding-bottom: 0.6em;"> 
+
+            <span style="font-size: 1em; margin-right: 1em;">in </span> 
+            <span style="font-size: 1.6em;border-bottom: 1px #c05400 solid; color: #976702;" (tap)="selectlocation()">
+              {{selected_location}}
+            </span> 
+            <ion-icon name="ios-arrow-down-outline" style="font-size: 1.5em !important;" ></ion-icon> 
+          
+          </p>  
+            
+        </button>  
+      </div>
+
+
+    </ion-grid>
+  
+   
+  </ion-content>

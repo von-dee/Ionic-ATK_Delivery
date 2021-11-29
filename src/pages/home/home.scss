@@ -1,0 +1,38 @@
+page-home {
+
+    img {
+        max-width: 85%;
+        border: 0;
+    }
+
+    .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+        top: -2px;
+        bottom: auto;
+        background-position: left 0 top 0;
+        height: 0px; 
+    }
+
+    .txthome{
+        color: #4e588f;
+    }
+
+    .label-ios-primary, .item-input .label-ios-primary, .item-select .label-ios-primary, .item-datetime .label-ios-primary {
+        color: #6e3602;
+    }
+
+    .item-md { 
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .item-md.item-block .item-inner {
+        border-bottom: 1px solid #e8e8e88f !important;
+    }
+    
+    .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+        top: -2px;
+        bottom: auto;
+        background-position: left 0 top 0;
+        height: 0px !important;
+    }
+}

@@ -1,0 +1,39 @@
+page-notification {
+    .notibubble{
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 15px;
+        border-radius: 5px;
+        .top{
+            font-size: 0.9em;
+            display: block;
+            height: 30px;
+            padding:16px;
+        }
+        .buttom{
+            padding: 16px;
+        }
+        .foot{
+            display: block;
+            text-align: right;
+            button{
+                background: none;
+                box-shadow: none;
+                font-size: 0.9em;
+            }
+        }
+    }
+    .new{
+        background: map-get($colors, dark);
+        color: #fff;
+    }
+    .read{
+        background: map-get($colors, light);
+        color: #263238;
+        border:1px solid #eeeeee;
+        .foot{
+            display: none !important;
+        }
+    }
+
+}

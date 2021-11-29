@@ -1,0 +1,7 @@
+{
+  "name": "decho",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
