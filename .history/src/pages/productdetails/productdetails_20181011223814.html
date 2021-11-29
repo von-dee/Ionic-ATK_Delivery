@@ -1,0 +1,56 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>{{productname}}</ion-title>
+    <ion-buttons class="cart" (tap)="opencart()" end>
+      <!-- <div class="badge" *ngIf="cartcount" style="color: white;">{{cartcount}}</div> -->
+      <button ion-button icon-only >
+        <span style="margin-right: 0.3em">{{cartcount}}</span>
+        <ion-icon name="ios-cart"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="productimg">
+    <!-- <img src="{{url+productphoto}}"> -->
+    <!-- <img src="img/barbecue.jpg">  -->
+  </div>
+  <!-- *ngIf="beneficiarycode" -->
+  <div class="addtocart" *ngIf="item_exists == false">
+    <button ion-button color="dark" (tap)="addToCart(productcode,productname,productprice)">
+      <ion-icon id="plus" name="md-add"></ion-icon><ion-icon name="md-cart"></ion-icon>
+    </button>
+  </div>
+
+  <ion-card no padding>
+      <ion-grid style="padding: 0;">
+          <ion-row>
+            <ion-col col-7>
+                <span>
+                  <b>Food :</b> {{productname}}</span>
+                <div>
+                <span>
+                  <b>Price : </b><span>&#8373;</span> {{productprice}}
+                </span>
+              </div>
+            </ion-col>
+            <ion-col col-5 style="padding: 0;" >
+              <div >
+                <button ion-button class="quantitybtn" (tap)="quantityedit('add',productname,productprice)">
+                  <ion-icon name="md-add" style="font-size: 1.5em !important;color: rgb(37, 42, 49);"></ion-icon>
+                </button>
+                <span style="font-size: 1.5em;color: #72380e;">{{item_quantity_num}} </span>
+                <button ion-button class="quantitybtn" (tap)="quantityedit('substract',productname,productprice)">
+                    <ion-icon name="md-remove" style="font-size: 1.5em !important;color: rgb(37, 42, 49);"></ion-icon>
+                </button>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    
+  </ion-card>
+</ion-content>

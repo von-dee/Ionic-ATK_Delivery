@@ -1,0 +1,126 @@
+<!--
+  Generated template for the MenuPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content>
+
+    <ion-row >
+        <ion-col col-6>
+          <button ion-button style="background: transparent; box-shadow: none;float: left" (tap)="toMaplocPage()" *ngIf="orderPlaced_showmap == true">
+            <ion-icon  name="ios-arrow-round-back-outline" style="font-size: 2.4em !important;float: right;color: #73380d;  margin-top: 0.3em;" ></ion-icon>
+          </button>  
+        </ion-col>
+        <ion-col col-6>
+            <div class="" >
+                <button ion-button style="background: transparent; box-shadow: none;float: right" (tap)="presentPopover($event);">
+                  <ion-icon  name="md-more" style="font-size: 1.8em !important;float: right;color: #73380d;  margin-top: 0.3em;" ></ion-icon>
+                </button>
+                <button ion-button style="background: transparent; box-shadow: none;float: right" (tap)="toMaplocPage()" *ngIf="orderPlaced_showmap == true">
+                  <ion-icon  name="md-map" style="font-size: 1.8em !important;float: right;color: #73380d;  margin-top: 0.3em;" ></ion-icon>
+                </button>  
+            </div>
+        </ion-col>
+    </ion-row>
+
+    <!-- <ion-row>
+        <ion-slides autoplay="5000" loop="true" speed="500" pager="true" >
+            <ion-slide >
+              <img src="img/break.jpg" alt="">
+            </ion-slide>
+            <ion-slide>
+              <img src="img/banana.jpg" alt="">
+            </ion-slide>
+            <ion-slide>
+              <img src="img/brownie.jpg" alt="">
+            </ion-slide>
+          </ion-slides>
+    </ion-row> -->
+
+    <div style="margin-left: 1.5em; margin-top: 2em;">
+      
+        <p class="introquestion" >Hey Selasie</p>
+        <p class="introquestion" >Where do you want to <br> eat?</p>
+      
+    </div>
+      
+
+    <ion-row style="margin-top: 1em;">
+          <ion-col col-12>
+            <ion-searchbar [(ngModel)]="terms" style="width: 90%;  margin: 0 auto;"></ion-searchbar>
+          </ion-col>
+    </ion-row>
+    
+
+    <div style="margin-left: 1.5em; margin-top: 2em;">
+        <p class="searchresults" >Search Results :</p>
+    </div>
+
+    <ion-row>
+      <ion-card style="width: 85%;  margin: 0 auto; border-radius: 14px">
+        <div id="container">
+          <div id="navi">
+              <ion-row style="margin-top: 1em;">
+                  <ion-col col-2>
+                    <div>
+                      icon
+                    </div>
+                  </ion-col>
+                  <ion-col col-10>
+                    Mexican Bite
+                  </ion-col>
+            </ion-row>
+          </div>
+          <div id="infoi">
+            <img src="img/barbecue.jpg" style="margin-top: 5em;"  />
+          </div>
+        </div>
+      </ion-card>
+    </ion-row>
+
+
+
+    <ion-row style="height: 100%;">
+        <div class="loader" *ngIf="!items"><img src="img/pageloader.gif" alt="loader"></div>
+        <div>
+          <ion-grid no-padding>
+            <ion-row no-padding align-items-center>
+                <div class="product-block" *ngFor=" let item of items | search : terms | sort: {property: column, order: order}">
+                    <ion-col class="productbox">
+                      <ion-card no-padding >
+                        <img src="{{url+item.productphoto}}" alt="product" (tap)="goProductdetailsPage(item.prcode,item.productname, item.productunitprice,item.productphoto)">
+                        <ion-card-content>
+                            <ion-row no-padding align-items-center>
+                              <ion-col col-7 (tap)="goProductdetailsPage(item.prcode,item.productname, item.productunitprice,item.productphoto)">
+                                <span>{{item.productname}}</span>
+                                <!-- <div class="card-actions">
+                                  <div id="price">{{currency+item.productunitprice}}</div>
+                                </div> -->
+                              </ion-col>
+                              <ion-col col-5>
+                                <!-- <button (tap)="addToCart(item.prcode,item.productname,item.productprice)" style="background: transparent;box-shadow: none;">
+                                    <ion-icon style="color:#73380d" id="plus" name="md-add"></ion-icon><ion-icon name="md-cart" style="color:#73380d"></ion-icon>
+                                </button> -->
+                                <div id="price">{{currency+item.productunitprice}}</div>
+                              </ion-col>
+                            </ion-row>
+                        </ion-card-content>
+                      </ion-card>
+                    </ion-col>
+                  </div>
+              </ion-row>
+            </ion-grid>
+        </div>
+    </ion-row>
+
+
+    <ion-fab right bottom>
+        <button ion-fab color="light" (tap)="toCartPage()">
+          <!-- <span style="z-index: 36;right: -30px;top: -10px;position: relative;">{{cartcount}}</span> -->
+          <ion-icon name="ios-cart-outline"></ion-icon>
+        </button>
+    </ion-fab>
+
+</ion-content>

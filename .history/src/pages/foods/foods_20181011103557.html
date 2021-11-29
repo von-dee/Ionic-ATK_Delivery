@@ -1,0 +1,100 @@
+<!--
+  Generated template for the MenuPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content>
+
+
+
+
+    <div>
+      
+        <div id="container_top">
+            <div id="navi_top" style="top: 0;">
+                <img src="img/barbecue.jpg" />
+            </div>
+            <div id="infoi_top" style="top: 0px;">
+                <div class="round_div" style=" margin-top: 1em; top: 25px;" (tap)="popView()">
+                    <ion-icon  name="ios-arrow-round-back-outline" style="font-size: 1.8em !important; margin-top: 0.2em; color: #cdd7db;" ></ion-icon>
+                </div> 
+                <ion-card style="position: absolute;top: 180px;left: 8%; width: 85%; height: 10em; margin: 0 auto; border-radius: 14px; margin-bottom: 1em !important;">
+                    <ion-row style="margin-top: 1em;">
+                        <ion-col col-2>
+                          <div class="round_div">
+                              <ion-icon  name="md-home" style="font-size: 1.8em !important; margin-top: 0.2em; color: #f0a180;" ></ion-icon>
+                          </div>
+                        </ion-col>
+                        <ion-col col-10 style="    padding-left: 1em;">
+                          <p>{{rest_name}}</p>
+                          <p>
+                            <span>{{rest_rate}}</span>
+                            <span>
+                                <ion-icon  name="ios-star" style="font-size: 1em !important;color: #ffa43a;" ></ion-icon>
+                                <ion-icon  name="ios-star" style="font-size: 1em !important;color: #ffa43a;" ></ion-icon>
+                                <ion-icon  name="ios-star" style="font-size: 1em !important;color: #ffa43a;" ></ion-icon>
+                                <ion-icon  name="ios-star" style="font-size: 1em !important;color: #ffa43a;" ></ion-icon>
+                                <ion-icon  name="ios-star-outline" style="font-size: 1em !important;color: #ffa43a;" ></ion-icon>
+                            </span>
+                          </p>
+                          <p>
+                            {{rest_description}}
+                          </p>
+      
+                        </ion-col>
+
+                        <ion-col col-2>
+                        </ion-col>
+                        <ion-col col-10 style="padding: 0em; padding-left: 1em;">
+                          <p>
+                            <span style="color: #b0b0b0;">
+                              <ion-icon  name="md-call" style="font-size: 1.3em !important; "></ion-icon>
+                              <span style="font-size: 0.8em;">+233 {{rest_phone}}</span>
+                            </span>
+                            
+                            <span style="float: right; margin-right: 1.5em; color: #b0b0b0;">
+                              <ion-icon  name="md-map" style="font-size: 1.3em !important; "></ion-icon>
+                              <span style="font-size: 0.8em;">{{rest_location}}</span>
+                            </span>
+                          </p>
+                        </ion-col>
+                  </ion-row>
+                </ion-card>
+            </div>
+          </div>
+        
+    </div>
+      
+
+    <!-- <ion-row style="margin-top: 1em;">
+          <ion-col col-12>
+            <ion-searchbar [(ngModel)]="terms" style="width: 90%;  margin: 0 auto;"></ion-searchbar>
+          </ion-col>
+    </ion-row> -->
+    
+
+    <div style="margin-left: 1.5em; margin-top: 9em;">
+        <p class="searchresults" >Featured Items :</p>
+    </div>
+
+    <div>
+      <div class="loader" *ngIf="!items"><img src="assets/imgs/loader.gif" alt="loader"></div>
+
+      <div>
+
+      </div>
+    </div>
+
+
+
+
+    <ion-fab right bottom>
+        <button ion-fab color="light" (tap)="toCartPage()">
+          <!-- <span style="z-index: 36;right: -30px;top: -10px;position: relative;">{{cartcount}}</span> -->
+          <ion-icon name="ios-cart-outline"></ion-icon>
+        </button>
+    </ion-fab>
+
+</ion-content>
